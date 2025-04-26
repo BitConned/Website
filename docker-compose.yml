@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  # Serviço de desenvolvimento
+  dev:
+    image: node:20-alpine
+    working_dir: /app
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    command: sh -c "npm install && npm run dev"
+    environment:
+      - NODE_ENV=development
+      - VITE_HOST=0.0.0.0
+
+  # Serviço de produção
+  prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
