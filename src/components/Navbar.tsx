@@ -43,7 +43,7 @@ const Navbar = ({ onOpenCareerForm }: NavbarProps = {}) => {
         <div className="flex justify-between items-center py-5">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/7060316a-eb6b-499b-b1a0-2fd61dcaf0a6.png" 
+              src="/lovable-uploads/bitconned-long-green.png" 
               alt="BitConned" 
               className="h-8"
             />

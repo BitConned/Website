@@ -13,10 +13,8 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-20 hero-content">
         <div className="flex flex-col items-center justify-center min-h-[70vh] max-w-3xl mx-auto text-center">
           <div className="flex items-center space-x-4 mb-6">
-            <img src="/lovable-uploads/7b177e96-4939-47b4-9ef1-c0bfaf206071.png" alt="BSC" className="h-8" />
-            <span className="text-bitconned-neon font-bold">BitConned</span>
-            <img src="/lovable-uploads/5e2a65e2-5fbb-476a-b37f-386a15d6499c.png" alt="Solana" className="h-8" />
-            <span className="text-bitconned-neon font-bold">FVCKBEEB</span>
+            <img src="/lovable-uploads/bitconned-bsc.png" alt="BSC" className="h-8" />
+            <img src="/lovable-uploads/bitconned-solana.png" alt="Solana" className="h-8" />
           </div>
           
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-gradient leading-tight">

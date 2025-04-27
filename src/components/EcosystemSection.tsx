@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -12,48 +11,42 @@ const EcosystemSection = () => {
     {
       name: "$FVCK",
       description: "Main token on BSC used for reporting and governance.",
-      icon: "/lovable-uploads/1e624dd5-9650-42c9-9714-0ae2d2796494.png",
-      logo: "/lovable-uploads/d5a976bd-06c4-4a90-af06-22e013b0088c.png",
+      icon: "/lovable-uploads/bitconned-bsc.png",
       network: "BSC",
       link: "/products/fvck-token",
     },
     {
       name: "FVCKBEEB",
       description: "Solana token for reporting on the Solana network.",
-      icon: "/lovable-uploads/1e624dd5-9650-42c9-9714-0ae2d2796494.png",
-      logo: "/lovable-uploads/0da7e1e1-7b0c-4f11-8010-d24a16ab32cd.png",
+      icon: "/lovable-uploads/bitconned-bsc.png",
       network: "Solana",
       link: "/products/fvckbeeb-token",
     },
     {
       name: "BitConned(WH)",
       description: "Wrapped token for liquidity and interoperability.",
-      icon: "/lovable-uploads/23e7e599-43da-4968-a0d9-32d947ae2ca2.png",
-      logo: "/lovable-uploads/23e7e599-43da-4968-a0d9-32d947ae2ca2.png",
+      icon: "/lovable-uploads/bitconned-bsc.png",
       network: "Cross-chain",
       link: "/products/wrapped-token",
     },
     {
       name: "Wormhole Bridge",
       description: "Bridge for secure transfer between blockchains.",
-      icon: "/lovable-uploads/23e7e599-43da-4968-a0d9-32d947ae2ca2.png",
-      logo: "/lovable-uploads/23e7e599-43da-4968-a0d9-32d947ae2ca2.png",
+      icon: "/lovable-uploads/bitconned-bsc.png",
       network: "Cross-chain",
       link: "/products/wormhole",
     },
     {
       name: "EquilibriumBot",
       description: "Bot for price equalization between DEXs.",
-      icon: "/lovable-uploads/1e624dd5-9650-42c9-9714-0ae2d2796494.png",
-      logo: "/lovable-uploads/1e624dd5-9650-42c9-9714-0ae2d2796494.png",
+      icon: "/lovable-uploads/bitconned-bsc.png",
       network: "Cross-chain",
       link: "/products/equilibrium-bot",
     },
     {
       name: "Swap Contract",
       description: "Smart contract for exchanges with reduced fees.",
-      icon: "/lovable-uploads/1e624dd5-9650-42c9-9714-0ae2d2796494.png",
-      logo: "/lovable-uploads/1e624dd5-9650-42c9-9714-0ae2d2796494.png",
+      icon: "/lovable-uploads/bitconned-bsc.png",
       network: "Cross-chain",
       link: "/products/swap-contract",
     },
@@ -77,7 +70,7 @@ const EcosystemSection = () => {
               className="data-[state=active]:bg-bitconned-neon data-[state=active]:text-bitconned-dark-blue"
               onClick={() => setActiveTab('bsc-to-solana')}
             >
-              <img src="/lovable-uploads/d5a976bd-06c4-4a90-af06-22e013b0088c.png" alt="BSC" className="h-6 w-6 mr-2" />
+              <img src="/lovable-uploads/bitconned-bsc.png" alt="BSC" className="h-6 w-6 mr-2" />
               BSC → Solana
             </TabsTrigger>
             <TabsTrigger 
@@ -85,7 +78,7 @@ const EcosystemSection = () => {
               className="data-[state=active]:bg-bitconned-neon data-[state=active]:text-bitconned-dark-blue"
               onClick={() => setActiveTab('solana-to-bsc')}
             >
-              <img src="/lovable-uploads/0da7e1e1-7b0c-4f11-8010-d24a16ab32cd.png" alt="Solana" className="h-6 w-6 mr-2" />
+              <img src="/lovable-uploads/bitconned-solana.png" alt="Solana" className="h-6 w-6 mr-2" />
               Solana → BSC
             </TabsTrigger>
           </TabsList>
@@ -93,21 +86,18 @@ const EcosystemSection = () => {
           <TabsContent value="bsc-to-solana" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {ecosystemComponents.map((component, index) => (
-                <Card key={index} className="bg-gradient-to-br from-bitconned-neon/10 via-bitconned-blue/20 to-black overflow-hidden transition-all duration-300 hover:-translate-y-2 group border border-white/10">
+                <Card key={index} className="bg-gradient-to-r from-[#0a0b0d] to-[#131517] border border-white/5 rounded-lg overflow-hidden transition-all hover:border-white/10">
                   <div className="p-6">
                     <div className="flex items-center mb-4">
                       <img src={component.icon} alt={component.name} className="h-10 w-10 mr-3" />
-                      <h3 className="text-xl font-bold text-white">{component.name}</h3>
+                      <h3 className="text-xl font-bold text-[#ffffff]">{component.name}</h3>
                     </div>
-                    <div className="flex items-center mb-4">
-                      <img src={component.logo} alt={component.network} className="h-6 w-6 mr-2" />
-                      <span className="text-sm text-gray-300">{component.network}</span>
-                    </div>
+                   
                     <p className="text-gray-300 mb-4">{component.description}</p>
                     <Link to={component.link} className="flex items-center text-black font-medium bg-bitconned-neon px-3 py-1 rounded-md w-fit transition-colors hover:bg-bitconned-neon/80">
                       Learn more <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
-                    <div className="h-1 w-0 group-hover:w-full bg-bitconned-neon mt-4 transition-all duration-500"></div>
+                    <div className="h-1 w-0 group-hover:w-full bg-[#00ff00] mt-4 transition-all duration-500"></div>
                   </div>
                 </Card>
               ))}
@@ -117,21 +107,18 @@ const EcosystemSection = () => {
           <TabsContent value="solana-to-bsc" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {ecosystemComponents.map((component, index) => (
-                <Card key={index} className="bg-gradient-to-br from-bitconned-neon/10 via-bitconned-blue/20 to-black overflow-hidden transition-all duration-300 hover:-translate-y-2 group border border-white/10">
+                <Card key={index} className="bg-gradient-to-r from-[#0a0b0d] to-[#131517] border border-white/5 rounded-lg overflow-hidden transition-all hover:border-white/10">
                   <div className="p-6">
                     <div className="flex items-center mb-4">
                       <img src={component.icon} alt={component.name} className="h-10 w-10 mr-3" />
-                      <h3 className="text-xl font-bold text-white">{component.name}</h3>
+                      <h3 className="text-xl font-bold text-[#ffffff]">{component.name}</h3>
                     </div>
-                    <div className="flex items-center mb-4">
-                      <img src={component.logo} alt={component.network} className="h-6 w-6 mr-2" />
-                      <span className="text-sm text-gray-300">{component.network}</span>
-                    </div>
+                     
                     <p className="text-gray-300 mb-4">{component.description}</p>
                     <Link to={component.link} className="flex items-center text-black font-medium bg-bitconned-neon px-3 py-1 rounded-md w-fit transition-colors hover:bg-bitconned-neon/80">
                       Learn more <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
-                    <div className="h-1 w-0 group-hover:w-full bg-bitconned-neon mt-4 transition-all duration-500"></div>
+                    <div className="h-1 w-0 group-hover:w-full bg-[#00ff00] mt-4 transition-all duration-500"></div>
                   </div>
                 </Card>
               ))}

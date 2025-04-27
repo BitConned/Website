@@ -78,7 +78,6 @@ const Index = () => {
       <BotSection />
       <RoadmapSection />
       <SecuritySection />
-      <AirdropNewsletter onOpenNewsletter={handleOpenNewsletter} />
       <FAQSection />
       <Footer />
       <AirdropBanner onOpenAirdrop={handleOpenAirdrop} />
