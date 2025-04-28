@@ -1,0 +1,44 @@
+@keyframes twinkle {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(1px 1px at 10% 10%, white 100%, transparent),
+    radial-gradient(1px 1px at 20% 20%, white 100%, transparent),
+    radial-gradient(1px 1px at 30% 30%, white 100%, transparent),
+    radial-gradient(1px 1px at 40% 40%, white 100%, transparent),
+    radial-gradient(1px 1px at 50% 50%, white 100%, transparent),
+    radial-gradient(1px 1px at 60% 60%, white 100%, transparent),
+    radial-gradient(1px 1px at 70% 70%, white 100%, transparent),
+    radial-gradient(1px 1px at 80% 80%, white 100%, transparent),
+    radial-gradient(1px 1px at 90% 90%, white 100%, transparent);
+  background-size: 200% 200%;
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+.stars::before,
+.stars::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  background-size: 200% 200%;
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+.stars::before {
+  animation-delay: -1s;
+  opacity: 0.5;
+}
+
+.stars::after {
+  animation-delay: -2s;
+  opacity: 0.3;
+} 

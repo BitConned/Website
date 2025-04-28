@@ -64,10 +64,10 @@ const EcosystemSection = () => {
         </p>
 
         <Tabs defaultValue="bsc-to-solana" className="w-full max-w-5xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2 mb-8">
+          <TabsList className="grid w-full grid-cols-2 mb-8 bg-transparent border border-white/10 rounded-lg p-1">
             <TabsTrigger 
               value="bsc-to-solana"
-              className="data-[state=active]:bg-bitconned-neon data-[state=active]:text-bitconned-dark-blue"
+              className="data-[state=active]:bg-bitconned-neon data-[state=active]:text-bitconned-dark-blue data-[state=inactive]:text-white/70 data-[state=inactive]:hover:text-white transition-all"
               onClick={() => setActiveTab('bsc-to-solana')}
             >
               <img src="/lovable-uploads/bitconned-bsc.png" alt="BSC" className="h-6 w-6 mr-2" />
@@ -75,7 +75,7 @@ const EcosystemSection = () => {
             </TabsTrigger>
             <TabsTrigger 
               value="solana-to-bsc"
-              className="data-[state=active]:bg-bitconned-neon data-[state=active]:text-bitconned-dark-blue"
+              className="data-[state=active]:bg-bitconned-neon data-[state=active]:text-bitconned-dark-blue data-[state=inactive]:text-white/70 data-[state=inactive]:hover:text-white transition-all"
               onClick={() => setActiveTab('solana-to-bsc')}
             >
               <img src="/lovable-uploads/bitconned-solana.png" alt="Solana" className="h-6 w-6 mr-2" />

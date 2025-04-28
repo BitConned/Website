@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
@@ -41,11 +40,11 @@ const TokensSection = () => {
           proteger a comunidade de fraudes.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
           {tokens.map((token, index) => (
             <Card 
               key={index} 
-              className="glassmorphism overflow-hidden transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-[#0a0b0d] to-[#131517] border border-white/5 rounded-lg overflow-hidden transition-all hover:border-white/10 hover:scale-105"
             >
               <div className="p-8">
                 <div className="flex items-center mb-6">

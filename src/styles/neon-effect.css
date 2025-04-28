@@ -1,0 +1,83 @@
+@keyframes neonPulse {
+  0% {
+    filter: drop-shadow(0 0 8px #00FF8F) 
+            drop-shadow(0 0 15px #00FF8F) 
+            drop-shadow(0 0 20px #00FF8F);
+  }
+  50% {
+    filter: drop-shadow(0 0 12px #00FF8F) 
+            drop-shadow(0 0 20px #00FF8F) 
+            drop-shadow(0 0 25px #00FF8F);
+  }
+  100% {
+    filter: drop-shadow(0 0 8px #00FF8F) 
+            drop-shadow(0 0 15px #00FF8F) 
+            drop-shadow(0 0 20px #00FF8F);
+  }
+}
+
+@keyframes rotateClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCounterClockwise {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.neon-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.neon-circle-inner {
+  width: 160px;
+  height: 160px;
+  border: 2px solid transparent;
+  border-top: 2px solid #00FF8F;
+  border-right: 2px solid #00FF8F;
+  animation: rotateClockwise 8s linear infinite;
+  filter: drop-shadow(0 0 10px #00FF8F);
+}
+
+.neon-circle-outer {
+  width: 230px;
+  height: 230px;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #00FF8F;
+  border-left: 2px solid #00FF8F;
+  animation: rotateCounterClockwise 12s linear infinite;
+  filter: drop-shadow(0 0 10px #00FF8F);
+}
+
+.neon-icon {
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+.neon-icon-container {
+  position: relative;
+  isolation: isolate;
+}
+
+.neon-icon-container::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  background: radial-gradient(circle at center,
+    rgba(0, 255, 143, 0.2) 0%,
+    rgba(0, 255, 143, 0.1) 30%,
+    transparent 70%
+  );
+  z-index: -1;
+  filter: blur(10px);
+} 
